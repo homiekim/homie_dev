@@ -1,4 +1,5 @@
 import { getPosts } from "@/utils/posts";
+import Link from "next/link";
 
 export default async function Home() {
   const posts = await getPosts();
@@ -7,14 +8,16 @@ export default async function Home() {
       <h3 className="text-3xl">Post List</h3>
       <ul className="flex flex-col gap-4 my-3">
         {posts.map((post) => (
-          <li key={post.slug}>
-            <h3 className="text-xl font-bold">
-              title : {post.fontMatter.title}
-            </h3>
-            <span>description : {post.fontMatter.description}</span>
-            <br />
-            <span>date : {post.fontMatter.date.toString()}</span>
-          </li>
+          <Link key={post.slug} href={`posts/${post.slug}`}>
+            <li className="p-4 border border-solid border-1 border-gray-100 rounded-lg shadow-md">
+              <h3 className="text-xl font-bold">
+                title : {post.fontMatter.title}
+              </h3>
+              <span>description : {post.fontMatter.description}</span>
+              <br />
+              <span>date : {post.fontMatter.date}</span>
+            </li>
+          </Link>
         ))}
       </ul>
     </div>
