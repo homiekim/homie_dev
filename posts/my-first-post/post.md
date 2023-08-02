@@ -1,12 +1,15 @@
 ---
 title: first post
-description: 'this is first post description'
+description: "this is first post description"
 date: 2023-08-01 01:02:11
+slug: first-post-slug
 ---
 
-# Heading   
+# Heading
 
 ## My First Blog Post
+
+### H3 test
 
 테스트 게시물
 Using Next v13 Mdx Remote
@@ -20,9 +23,12 @@ Using Next v13 Mdx Remote
 
 **Bold** Test
 
-code Test
+`code` Test
 
-```javascript
+[blog](https://hoime.tistory.com/) Test
+
+![img](/home.png)
+```js
 function solution(k, d) {
   let answer = 0;
   for (let i = 0; i <= d; i += k) {
