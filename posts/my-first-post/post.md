@@ -27,7 +27,7 @@ Using Next v13 Mdx Remote
 
 [blog](https://hoime.tistory.com/) Test
 
-![img](/home.png)
+![img](/code.png)
 ```js
 function solution(k, d) {
   let answer = 0;

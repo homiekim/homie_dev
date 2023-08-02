@@ -2,6 +2,7 @@ import { MDXComponents } from "mdx/types";
 import Image from "next/image";
 import NextImage from "next/image";
 import { HTMLAttributes, HTMLProps } from "react";
+import CustomImage from "./CustomImage";
 
 // const ImageComponent = (props: HTMLProps<HTMLImageElement>) => {
 //   const { src } = props;
@@ -20,6 +21,10 @@ import { HTMLAttributes, HTMLProps } from "react";
 // };
 
 const MDXComponents: MDXComponents = {
+  img: (v) => {
+    return <CustomImage src={v.src!} alt={v.alt!} />;
+    //return <img {...v}/>
+  },
 };
 
 export default MDXComponents;
