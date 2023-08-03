@@ -4,18 +4,18 @@
 
 code {
   counter-reset: line;
+  @apply py-1 px-2 bg-gray-200 rounded;
 }
 
 code > [data-line]::before {
   counter-increment: line;
   content: counter(line);
 
-  /* Other styling */
   display: inline-block;
   width: 1rem;
   margin-right: 2rem;
   text-align: right;
-  color: gray;
+  @apply text-gray-300;
 }
 
 code[data-line-numbers-max-digits="2"] > [data-line]::before {
@@ -24,4 +24,15 @@ code[data-line-numbers-max-digits="2"] > [data-line]::before {
 
 code[data-line-numbers-max-digits="3"] > [data-line]::before {
   width: 3rem;
+}
+
+.prose :where(code):not(:where([class~="not-prose"] *)) {
+  @apply text-orange-500
+}
+.prose :where(code):not(:where([class~="not-prose"] *))::before {
+  content: "";
+}
+
+.prose :where(code):not(:where([class~="not-prose"] *))::after {
+  content: "";
 }

@@ -1,15 +1,13 @@
 ---
 title: first post
-description: "this is first post description"
-date: 2023-08-01 01:02:11
+description: "this is first second description"
+date: 2023-07-04 12:02:18
 slug: first-post-slug
 ---
 
 # Heading
 
 ## My First Blog Post
-
-### H3 test
 
 테스트 게시물
 Using Next v13 Mdx Remote
@@ -25,10 +23,27 @@ Using Next v13 Mdx Remote
 
 `code` Test
 
-[blog](https://hoime.tistory.com/) Test
+[https://homei.tistory.com](https://hoime.tistory.com/) Test
 
-![img](/code.png)
-```js
+> This is a first blockqute. 
+
+
+> ### This is a H3
+>
+> - List
+>
+```
+test custom
+```
+
+`
+list 테스트
+- item 1
+- item 2
+- item 3
+`
+
+```javascript
 function solution(k, d) {
   let answer = 0;
   for (let i = 0; i <= d; i += k) {

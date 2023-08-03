@@ -14,8 +14,8 @@ export const getPosts = cache(async () => {
   const files = sync("./posts/**/*.md*");
   const posts = files.map((path) => {
     const file = fs.readFileSync(path, { encoding: "utf-8" });
-    const { data, content } = matter(file);
-
+    const m = matter(file);
+    const { data, content } = m;
     return {
       slug: data.slug,
       fontMatter: {
