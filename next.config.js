@@ -3,6 +3,6 @@ const nextConfig = {
   experimental: {
     mdxRs: true,
   },
-};
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig
