@@ -1,5 +1,6 @@
-import { getIntrinsicSize } from '@utils/getIntrinsicSize'
 import Image from 'next/image'
+
+import { getIntrinsicSize } from '@utils/getIntrinsicSize'
 
 interface Props {
   src: string

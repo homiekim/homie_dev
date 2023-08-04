@@ -1,4 +1,5 @@
 import { promisify } from 'util'
+
 import imageSize from 'image-size'
 const sizeof = promisify(imageSize)
 

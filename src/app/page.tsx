@@ -1,5 +1,6 @@
-import { getPosts } from '@utils/posts'
 import Link from 'next/link'
+
+import { getPosts } from '@utils/posts'
 
 export default async function Home() {
   const posts = await getPosts()

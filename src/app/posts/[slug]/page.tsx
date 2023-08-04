@@ -1,8 +1,10 @@
-import MDXComponent from '@components/MDXComponents'
-import { getPost } from '@utils/posts'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import rehypePrettyCode from 'rehype-pretty-code'
 import remarkGfm from 'remark-gfm'
+
+import MDXComponent from '@components/MDXComponents'
+
+import { getPost } from '@utils/posts'
 
 interface Props {
   params: { slug: string }
