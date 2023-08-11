@@ -1,10 +1,15 @@
 import React from 'react'
+
 import './globals.css'
+import NavBar from '@components/NavBar'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="mx-auto max-w-3xl p-4 ">{children}</body>
+      <body>
+        <NavBar />
+        <main className="mx-auto max-w-3xl p-4 pt-[60px] ">{children}</main>
+      </body>
     </html>
   )
 }

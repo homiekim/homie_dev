@@ -5,7 +5,7 @@ import { getPosts } from '@utils/posts'
 export default async function Home() {
   const posts = await getPosts()
   return (
-    <div>
+    <>
       <h3 className="text-3xl">Post List</h3>
       <ul className="my-3 flex flex-col gap-4">
         {posts.map(post => (
@@ -19,6 +19,6 @@ export default async function Home() {
           </Link>
         ))}
       </ul>
-    </div>
+    </>
   )
 }
