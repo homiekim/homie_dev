@@ -3,9 +3,10 @@
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
     "plugin:react-hooks/recommended",
     "plugin:@next/next/recommended",
-    "plugin:prettier/recommended"
+    "prettier"
   ],
   "plugins": ["import"],
   "parser": "@typescript-eslint/parser",
@@ -42,5 +43,5 @@
       }
     ]
   },
-  "ignorePatterns": ["*.config.ts"]
+  "ignorePatterns": ["*.config.js"]
 }

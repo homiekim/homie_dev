@@ -6,9 +6,9 @@ export default async function Home() {
   const posts = await getPosts()
   return (
     <>
-      <h3 className="text-3xl">Post List</h3>
+      <h3 className="text-3xl">최근 게시물</h3>
       <ul className="my-3 flex flex-col gap-4">
-        {posts.map(post => (
+        {posts.slice(0, 5).map(post => (
           <Link key={post.slug} href={`posts/${post.slug}`}>
             <li className="border-1 rounded-lg border border-solid border-gray-100 p-4 shadow-md">
               <h3 className="text-xl font-bold">title : {post.fontMatter.title}</h3>

@@ -13,10 +13,11 @@ interface FrontMatter {
 
 export const getPosts = cache(async () => {
   const files = sync('./posts/**/*.md*')
+
   const posts = files.map(path => {
     const file = fs.readFileSync(path, { encoding: 'utf-8' })
-    const m = matter(file)
-    const { data, content } = m
+    const { data, content } = matter(file)
+
     return {
       slug: data.slug,
       fontMatter: {
@@ -26,6 +27,7 @@ export const getPosts = cache(async () => {
       mdData: content,
     }
   })
+
   return posts
 })
 
