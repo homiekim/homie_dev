@@ -4,10 +4,15 @@ import remarkGfm from 'remark-gfm'
 
 import MDXComponent from '@components/MDXComponents'
 
-import { getPost } from '@utils/posts'
+import { getPost, getPosts } from '@utils/posts'
 
 interface Props {
   params: { slug: string }
+}
+
+export async function generateStaticParams() {
+  const posts = await getPosts()
+  return posts.map(post => ({ slug: post.slug }))
 }
 
 export default async function PostDetailPage({ params }: Props) {
