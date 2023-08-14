@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { memo } from 'react'
 
 const NavBar = () => {
   return (
@@ -20,4 +21,4 @@ const NavBar = () => {
   )
 }
 
-export default NavBar
+export default memo(NavBar)

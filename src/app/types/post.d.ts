@@ -3,4 +3,6 @@ interface PostFrontMatter {
   description: string
   date: string
   slug: string
+  tags: Array<string>
 }
+
