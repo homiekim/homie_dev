@@ -1,8 +1,8 @@
+import remarkGfm from 'remark-gfm'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import rehypePrettyCode from 'rehype-pretty-code'
-import remarkGfm from 'remark-gfm'
 
-import MDXComponent from '@components/MDXComponents'
+import MDXComponent from '@components/mdx-component'
 
 import { getPost, getPosts } from '@utils/posts'
 

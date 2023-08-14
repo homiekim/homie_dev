@@ -1,7 +1,7 @@
 import { ReactElement } from 'react'
 import { MDXComponents } from 'mdx/types'
 
-import CustomImage from './CustomImage'
+import CustomImage from './custom-image'
 
 const MDXComponent: MDXComponents = {
   pre: v => {
